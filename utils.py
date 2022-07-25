@@ -12,8 +12,8 @@ import numpy as np
 
 def get_screen():
     # Returned screen requested by gym is 400x600x3, but is sometimes larger
-    # such as 800x1200x3. Transpose it into torch order (CHW).
-    #env.render(mode='human')
+    #Transpose it into torch order (CHW).
+    
     resize = T.Compose([T.ToPILImage(),
                     T.Resize(40, interpolation=Image.CUBIC),
                     T.ToTensor()])
