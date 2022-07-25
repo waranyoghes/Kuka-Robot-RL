@@ -3,4 +3,5 @@
 ##### Implementation details
 ###### The states of the robot is a h,w,c image feed which is feed into the actor crtic network to outpout the action and value of the corresponding state. 
 ###### The policy of the agent is updated using the proximal policy optimization algorithm (https://arxiv.org/abs/1707.06347). The value funtion is updated using Generalized advantage estimation method (https://arxiv.org/pdf/1506.02438.pdf).
+###### The removeHeightHack is set to False for the KukaDiverseObjectEnv.
 
