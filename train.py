@@ -136,7 +136,7 @@ def main():
         
     
         if best_mean_reward is None or best_mean_reward < mean_reward:
-                # For saving the model and possibly resuming training
+                # For saving the model
                 torch.save({
                         'policy_state_dict': policy.state_dict(),
                         'optimizer_state_dict': optimizer.state_dict(),
