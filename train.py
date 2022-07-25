@@ -120,10 +120,7 @@ def main():
             # clipped surrogate
             L = -(L_CLIP - L_VF + beta*S)
             optimizer.zero_grad()
-            # This may need retain_graph=True on the backward pass
-            # as pytorch automatically frees the computational graph after
-            # the backward pass to save memory
-            # Without this, the chain of derivative may get lost
+            # retain_graph=True on the backward pass
             L.backward(retain_graph=True)
             torch.nn.utils.clip_grad_norm_(policy.parameters(), 10.0)
             optimizer.step()
